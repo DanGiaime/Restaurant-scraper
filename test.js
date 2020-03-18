@@ -6,7 +6,7 @@ var parse = require('csv-parse')
 const STARTER_INDEX = 983;
 const BATCH_SIZE = 49;
 
-fs.readFile("/Users/work/Downloads/all_pos.csv", function (err, fileData) {
+fs.readFile("restaurants.csv", function (err, fileData) {
   parse(fileData, {columns: false, trim: true}, function(err, rows) {
 	// Your CSV data is in an array of arrys passed to this callback as rows.
 	findAllWebsites(rows).then(websites => {
